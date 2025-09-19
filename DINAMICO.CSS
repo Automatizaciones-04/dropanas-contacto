@@ -109,4 +109,20 @@
   }
 }
 
+button {
+  white-space: nowrap; /* evita saltos de línea */
+}
+button {
+  min-width: 120px; /* ancho mínimo */
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  button {
+    font-size: 14px;   /* texto más pequeño en móvil */
+    padding: 8px 12px; /* menos relleno */
+    min-width: auto;   /* que se ajuste al texto */
+  }
+}
+
+
 
