@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff;
-      color: #333;
+      background: #e1dfdf; /* ✅ Fondo negro elegante */
+      color: #000000;   /* Texto claro */
       margin: 0;
     }
 
@@ -35,7 +35,7 @@
       height: 80px;
       border-radius: 50%;
       border: 3px solid #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease;
     }
     .logo img:hover {
@@ -59,20 +59,21 @@
 
     /* Secciones */
     section {
-      padding: 25px 20px; /* más compacto */
+      padding: 25px 20px;
       max-width: 1100px;
       margin: auto;
-      text-align: justify; /* Justificado */
+      text-align: justify;
     }
     section h2 {
       font-size: 2rem;
       margin-bottom: 15px;
-      color: #8b0000; /* Rojo oscuro impactante */
+      color: #8b0000; /* ✅ Rojo brillante sobre negro */
       text-align: center;
     }
     section p {
       font-size: 1.1rem;
       margin-bottom: 20px;
+      color: #000000; /* ✅ Gris claro para contraste */
     }
 
     /* Features */
@@ -83,21 +84,22 @@
       margin-top: 10px;
     }
     .card {
-      background: #fff;
+      background: #ffffff; /* ✅ Recuadro blanco que resalta */
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgb(103, 14, 14);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: justify;
+      color: #000000; /* ✅ Texto oscuro dentro del card */
     }
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px rgb(0, 0, 0);
     }
     .card h3 {
       margin-bottom: 10px;
       font-size: 1.4rem;
-      color: #8b0000; /* Rojo oscuro impactante */
+      color: #8b0000;
       text-align: center;
     }
     .card p {
@@ -107,9 +109,9 @@
 
     /* Botones */
     .btn {
-      display: block; /* centrado */
-      margin: auto; /* centrado */
-      background: #8b0000; /* Rojo oscuro */
+      display: block;
+      margin: auto;
+      background: #8b0000;
       color: white;
       padding: 12px 20px;
       border-radius: 8px;
@@ -121,10 +123,10 @@
       width: fit-content;
     }
     .btn:hover {
-      background: #660000; /* más oscuro al pasar */
+      background: #660000;
     }
     .community {
-      background: #a52a2a; /* otro rojo oscuro */
+      background: #a52a2a;
     }
     .community:hover {
       background: #701717;
@@ -132,12 +134,40 @@
 
     /* Footer */
     footer {
-      background: #f5f5f5;
+      background: #000000b6;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #555;
+      color: #fcfbfb;
     }
+   
+    /* Ajuste para que los botones no se partan en varias líneas */
+button, 
+.btn, 
+.btn-red {
+  white-space: nowrap;     /* Evita saltos de línea */
+  overflow: hidden;        /* Oculta si se pasa */
+  text-overflow: ellipsis; /* "..." si no cabe */
+  display: inline-block;   /* Ajuste al texto */
+}
+
+/* Contenedor centrado */
+.card {
+  text-align: center; /* Centra todo dentro de cada tarjeta */
+}
+
+/* Ajuste especial en móviles */
+@media (max-width: 768px) {
+  button, 
+  .btn, 
+  .btn-red {
+    width: auto;             /* Ajuste al texto */
+    min-width: unset;        /* Elimina ancho mínimo */
+    font-size: 14px;         /* Letra más pequeña */
+    padding: 8px 14px;       /* Más compacto */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -151,7 +181,7 @@
   </header>
 
   <!-- Sobre Nosotros -->
-  <section style="padding-bottom: 10px;"> <!-- menos espacio abajo -->
+  <section style="padding-bottom: 10px;">
     <h2>¿Quiénes Somos?</h2>
     <p>
       En <strong>Dropanas</strong> simplificamos el comercio electrónico conectando <strong>proveedores y vendedores</strong>. 
@@ -161,21 +191,21 @@
   </section>
 
   <!-- Opciones -->
-  <section style="padding-top: 5px;"> <!-- pegado arriba -->
+  <section style="padding-top: 5px;">
     <h2>Conéctate con Nosotros</h2>
     <div class="features">
       <!-- Chat WhatsApp -->
       <div class="card">
         <h3>💬 <span style="color:#8b0000;">Chat de WhatsApp</span></h3>
         <p>
+            <ul style="margin: 0; padding-left: 20px; list-style: none;"></ul>
           Accede a nuestro <strong>chat inteligente</strong> para resolver dudas en tiempo real.  
           Podrás:  
-     <ul style="text-align: justify; margin: 0; padding-left: 20px; list-style: none;">
-  <li>✔️ Hablar con nuestro bot de asistencia virtual.</li>
-  <li>✔️ Agendar citas personalizadas con asesores.</li>
-  <li>✔️ Recibir atención en el horario que prefieras.</li>
-</ul>
-
+         <ul style="list-style: none; padding-left: 20px; text-align: justify;">
+            <li>✔️ Hablar con nuestro bot de asistencia virtual.</li>
+            <li>✔️ Agendar citas personalizadas con asesores.</li>
+            <li>✔️ Recibir atención en el horario que prefieras.</li>
+          </ul>
         </p>
         <a href="https://wa.me/message/BCTP7LB3MH4PD1" target="_blank" class="btn">Ir al Chat</a>
       </div>
@@ -184,23 +214,24 @@
       <div class="card">
         <h3>🌐 <span style="color:#8b0000;">Comunidad Dropanas</span></h3>
         <p>
+            <ul style="margin: 0; padding-left: 20px; list-style: none;"></ul>
           Únete a nuestra comunidad exclusiva en WhatsApp.  
           Aquí podrás:  
-        <ul style="text-align: justify; margin: 0; padding-left: 20px; list-style: none;">
-  <li>✔️ Resolver dudas con asesores y otros miembros.</li>
-  <li>✔️ Acceder a <strong>clases virtuales y capacitaciones</strong>.</li>
-  <li>✔️ Tener un <strong>caso especializado</strong> adaptado a tus necesidades.</li>
-</ul>
-
+          <ul style="list-style: none; padding-left: 20px; text-align: justify;">
+            <li>✔️ Resolver dudas con asesores y otros miembros.</li>
+            <li>✔️ Acceder a <strong>clases virtuales y capacitaciones</strong>.</li>
+            <li>✔️ Tener un <strong>caso especializado</strong> adaptado a tus necesidades.</li>
+          </ul>
         </p>
         <a href="https://chat.whatsapp.com/LHYYjVMFED58E30UYfJjcK" target="_blank" class="btn community">Unirme Ahora</a>
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     © 2025 Dropanas - Todos los derechos reservados.
   </footer>
 </body>
 </html>
+
