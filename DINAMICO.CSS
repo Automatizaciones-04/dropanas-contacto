@@ -89,3 +89,24 @@
   }
 }
 
+/* Ajustes responsivos para móviles */
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr; /* Que solo haya una columna */
+  }
+
+  .btn {
+    width: auto;          /* Que no ocupen todo el ancho */
+    max-width: 220px;     /* Tamaño máximo más compacto */
+    margin: 0 auto;       /* Centrados */
+    display: block;       /* Asegura que estén uno debajo del otro */
+    font-size: 0.95rem;   /* Letra un poquito más pequeña */
+    padding: 10px 16px;   /* Botón más ajustado */
+  }
+
+  .card {
+    padding: 20px;        /* Menos espacio interno */
+  }
+}
+
+
