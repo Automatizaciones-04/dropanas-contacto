@@ -53,3 +53,39 @@
     display: block;
     margin-bottom: 10px;
 }
+
+/* Ajuste general de los botones */
+.btn-red {
+  background-color: #8B0000; /* rojo oscuro */
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-red:hover {
+  background-color: #a00000; /* más claro */
+  transform: scale(1.05);
+}
+
+/* 📱 Ajuste especial para móvil */
+@media (max-width: 768px) {
+  .btn-red {
+    display: block;         /* Ocupar toda la fila */
+    width: 100%;            /* Botón del ancho completo */
+    margin: 10px auto;      /* Centrado y con espacio */
+    font-size: 1.1em;       /* Letra un poco más grande */
+  }
+
+  .connect-card {
+    text-align: center;     /* Centrar contenido */
+    padding: 15px;
+  }
+}
+
