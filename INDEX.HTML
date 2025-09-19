@@ -99,7 +99,7 @@
     .card h3 {
       margin-bottom: 10px;
       font-size: 1.4rem;
-      color: #8b0000;
+      color: #e70606;
       text-align: center;
     }
     .card p {
@@ -111,7 +111,7 @@
     .btn {
       display: block;
       margin: auto;
-      background: #8b0000;
+      background: #e60202;
       color: white;
       padding: 12px 20px;
       border-radius: 8px;
@@ -126,7 +126,7 @@
       background: #660000;
     }
     .community {
-      background: #a52a2a;
+      background: #e60202;
     }
     .community:hover {
       background: #701717;
@@ -141,19 +141,51 @@
       color: #fcfbfb;
     }
    
-    /* Ajuste para que los botones no se partan en varias líneas */
+  /* Estilos base de botones */
 button, 
 .btn, 
 .btn-red {
-  white-space: nowrap;     /* Evita saltos de línea */
-  overflow: hidden;        /* Oculta si se pasa */
-  text-overflow: ellipsis; /* "..." si no cabe */
-  display: inline-block;   /* Ajuste al texto */
+  white-space: nowrap;     
+  overflow: hidden;        
+  text-overflow: ellipsis; 
+  display: inline-block;   
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #fb2600); /* degradado atractivo */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Movimiento suave al pasar el mouse */
+button:hover, 
+.btn:hover, 
+.btn-red:hover {
+  transform: translateY(-5px) scale(1.05); /* se eleva y crece un poco */
+  box-shadow: 0 8px 20px rgba(255, 65, 109, 0.551); /* sombra brillante */
+  animation: glow 1.5s infinite alternate; /* destello intermitente */
+}
+
+/* Animación de brillo */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgb(255, 2, 2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgb(236, 2, 2);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(250, 1, 1, 0.77);
+  }
 }
 
 /* Contenedor centrado */
 .card {
-  text-align: center; /* Centra todo dentro de cada tarjeta */
+  text-align: center;
 }
 
 /* Ajuste especial en móviles */
@@ -161,12 +193,13 @@ button,
   button, 
   .btn, 
   .btn-red {
-    width: auto;             /* Ajuste al texto */
-    min-width: unset;        /* Elimina ancho mínimo */
-    font-size: 14px;         /* Letra más pequeña */
-    padding: 8px 14px;       /* Más compacto */
+    width: auto;
+    min-width: unset;
+    font-size: 14px;
+    padding: 15px 18px;
   }
 }
+
 
   </style>
 </head>
@@ -234,4 +267,6 @@ button,
   </footer>
 </body>
 </html>
+
+
 
